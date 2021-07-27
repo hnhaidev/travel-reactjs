@@ -1,0 +1,23 @@
+@import "../abstracts"; //index
+
+.model {
+  @include position(fixed, 0, 0, 0, 0, 100%, 100%);
+  background: rgba(0, 0, 0, 0.4);
+  @include align(flex, center, center, null);
+  z-index: inherit;
+
+  &__heading {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+  }
+  &__body {
+    background: $white;
+    width: 38rem;
+    height: auto;
+    padding: 2rem;
+    font-size: 1.4rem;
+
+    @include animation(modelAnimate, 0.5s, linear, -10rem, 0);
+  }
+}

@@ -1,0 +1,64 @@
+@mixin position($position, $top, $left, $bottom, $right, $width, $height) {
+  position: $position;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+  width: $width;
+  height: $height;
+}
+
+@mixin align($flex, $justify-content, $align-items, $hight) {
+  display: $flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  height: $hight;
+}
+
+@mixin button(
+  $color1,
+  $color2,
+  $textColor,
+  $height,
+  $fontSize,
+  $bdr,
+  $paddingTB,
+  $paddingLR
+) {
+  background: linear-gradient(to right, $color1, $color2);
+  color: $textColor;
+  height: $height;
+  line-height: $height;
+  font-size: $fontSize;
+  border-radius: $bdr;
+  padding: $paddingTB $paddingLR;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@mixin animation($name, $duration, $timeFunction, $translate1, $translate2) {
+  animation: $name $duration $timeFunction;
+  @keyframes #{$name} {
+    0% {
+      opacity: 0;
+      transform: translateY($translate1);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY($translate2);
+    }
+  }
+}
+
+@mixin toggleSpans($bg, $width, $height, $mt) {
+  display: block;
+  background: $bg;
+  width: $width;
+  height: $height;
+  margin-top: $mt;
+  transition: all 0.3s linear;
+}

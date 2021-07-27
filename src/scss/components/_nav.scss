@@ -1,0 +1,55 @@
+@import "../abstracts";
+
+.navLayer {
+  @include position(fixed, 0, 0, 0, 0, 100%, 100%);
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 3;
+}
+
+.nav {
+  @include position(fixed, 0, null, 0, 0, 31.2rem, 100%);
+  background: $white;
+  z-index: 4;
+  transition: all 0.3s linear;
+  @include align(flex, center, center, 100%);
+
+  &__content {
+    width: 100%;
+    li {
+      list-style: none;
+      a {
+        color: $black;
+        text-decoration: none;
+        padding: 1.5rem 3rem;
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 400;
+        text-align: right;
+        position: relative;
+
+        &::before {
+          @include position(absolute, 0, 0, 0, 0, 100%, 100%);
+          content: "";
+          z-index: -1;
+          background: linear-gradient(to right, $main1, $main2);
+          transform: scale(0);
+          transition: all 0.3s linear;
+        }
+
+        &:hover::before {
+          transform: scale(1);
+        }
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &--open {
+    transform: translateX(0);
+  }
+  &--close {
+    transform: translateX(100%);
+  }
+}
