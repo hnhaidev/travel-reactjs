@@ -5,6 +5,8 @@ import ModelContext from "../context/ModelContext";
 import { OPEN_MODEL } from "../context/types/ModelTypes";
 import Register from "../auth/Register";
 import Login from "../auth/Login";
+import { Helmet } from "react-helmet-async";
+import Destinations from "../components/Destinations";
 
 function Home() {
   const { dispatch } = useContext(ModelContext);
@@ -20,6 +22,11 @@ function Home() {
 
   return (
     <>
+      <Helmet>
+        <title>Travel Friends</title>
+        <meta name="description" content="Demo to Travel" />
+        <meta name="keywords" content="travel, demo travel" />
+      </Helmet>
       <Header heading={state.heading} paragraph={state.paragraph}>
         <button
           className="btn-default"
@@ -34,6 +41,8 @@ function Home() {
       <Model current={loginModel}>
         <Login currentModel={registerModel} />
       </Model>
+
+      <Destinations />
     </>
   );
 }

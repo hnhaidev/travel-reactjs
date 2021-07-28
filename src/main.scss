@@ -8,3 +8,11 @@
 @use "scss/components/model";
 @use "scss/components/nav";
 @use "scss/components/toggle";
+@use "scss/components/destination";
+@use "scss/components/destinationInfo";
+
+//import layout file
+@use "scss/layout/layout";
+
+//import abstracts file
+@use "scss/abstracts/button";
