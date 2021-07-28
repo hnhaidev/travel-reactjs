@@ -1,0 +1,32 @@
+@import "../abstracts";
+
+.services {
+  margin: 8rem 0;
+  background: $silverLight-40;
+  padding: 13rem 0;
+  transform: skewY(-5deg);
+
+  &__contents {
+    transform: skewY(5deg);
+  }
+
+  &__left {
+    margin-right: 10rem;
+
+    &__heading {
+      font-size: 3.5rem;
+      font-weight: 900;
+      line-height: 4rem;
+      background: linear-gradient(35deg, $black 40%, $main1 50%);
+      color: transparent;
+      background-clip: text;
+      text-transform: capitalize;
+    }
+
+    &__paragraph {
+      margin-top: 3.6rem;
+      font-size: 1.6rem;
+      line-height: 2.7rem;
+    }
+  }
+}
