@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import Header from "../components/Header";
 import Model from "../components/Model";
 import ModelContext from "../context/ModelContext";
@@ -9,6 +9,10 @@ import { Helmet } from "react-helmet-async";
 import Destinations from "../components/Destinations";
 
 function Home() {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   const { dispatch } = useContext(ModelContext);
 
   const [state] = useState({

@@ -1,4 +1,4 @@
-import { DETAILS } from "../types/DestinationType";
+import { CITIES, DETAILS } from "../types/DestinationType";
 
 const DestinationsReducer = (state, action) => {
   const { type, payload } = action;
@@ -10,6 +10,17 @@ const DestinationsReducer = (state, action) => {
     return {
       ...state,
       details: destination,
+    };
+  }
+  //
+  else if (type === CITIES) {
+    const filtered = state.cities.filter(
+      (city) => parseInt(city.destinationId) === parseInt(payload)
+    );
+
+    return {
+      ...state,
+      filteredCities: filtered,
     };
   }
   //

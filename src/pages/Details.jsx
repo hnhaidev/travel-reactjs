@@ -1,19 +1,22 @@
 import { useContext, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
+import Cities from "../components/Cities";
 import DestinationInfo from "../components/DestinationInfo";
 import Header from "../components/Header";
 import DestinationsContext from "../context/DestinationsContext";
-import { DETAILS } from "../context/types/DestinationType";
+import { CITIES, DETAILS } from "../context/types/DestinationType";
 
 function Details() {
   const { id } = useParams();
 
   const { destinationsData, dispatch } = useContext(DestinationsContext);
-  const { details } = destinationsData;
+  const { details, filteredCities } = destinationsData;
 
   useEffect(() => {
     dispatch({ type: DETAILS, payload: id });
+    dispatch({ type: CITIES, payload: id });
+    window.scroll(0, 0);
   }, [id]);
 
   return (
@@ -23,6 +26,7 @@ function Details() {
       </Helmet>
       <Header heading={details.name} image={details.bigImage}></Header>
       <DestinationInfo details={details} />
+      <Cities cities={filteredCities} name={details.name} />
     </>
   );
 }

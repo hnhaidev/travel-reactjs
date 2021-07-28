@@ -62,3 +62,12 @@
   margin-top: $mt;
   transition: all 0.3s linear;
 }
+
+@mixin status($bg, $color) {
+  padding: 0.6rem 1.3rem;
+  background: $bg;
+  color: $color;
+  border-radius: 0.6rem;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
