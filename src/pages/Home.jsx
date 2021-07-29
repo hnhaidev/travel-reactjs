@@ -9,6 +9,7 @@ import { Helmet } from "react-helmet-async";
 import Destinations from "../components/destinations/Destinations";
 import Services from "../components/services/Services";
 import Reviews from "../components/reviews/Reviews";
+import Gallery from "../components/gallery/Gallery";
 
 function Home() {
   useEffect(() => {
@@ -53,6 +54,8 @@ function Home() {
       <Services />
 
       <Reviews />
+
+      <Gallery />
     </>
   );
 }
