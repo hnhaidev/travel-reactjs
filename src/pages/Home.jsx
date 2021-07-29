@@ -7,7 +7,8 @@ import Register from "../auth/Register";
 import Login from "../auth/Login";
 import { Helmet } from "react-helmet-async";
 import Destinations from "../components/destinations/Destinations";
-import Services from "../components/Services";
+import Services from "../components/services/Services";
+import Reviews from "../components/reviews/Reviews";
 
 function Home() {
   useEffect(() => {
@@ -50,6 +51,8 @@ function Home() {
       <Destinations />
 
       <Services />
+
+      <Reviews />
     </>
   );
 }
