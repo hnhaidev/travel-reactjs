@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import DestinationsContext from "../context/DestinationsContext";
+import DestinationsContext from "../../context/DestinationsContext";
 import DestinationsList from "./DestinationsList";
 
 function Destinations() {

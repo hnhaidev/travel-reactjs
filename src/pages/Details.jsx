@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
-import Cities from "../components/Cities";
-import DestinationInfo from "../components/DestinationInfo";
+import Cities from "../components/cities/Cities";
+import DestinationInfo from "../components/destinationInfo/DestinationInfo";
 import Header from "../components/Header";
 import DestinationsContext from "../context/DestinationsContext";
 import { CITIES, DETAILS } from "../context/types/DestinationType";

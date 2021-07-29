@@ -6,7 +6,7 @@ import { OPEN_MODEL } from "../context/types/ModelTypes";
 import Register from "../auth/Register";
 import Login from "../auth/Login";
 import { Helmet } from "react-helmet-async";
-import Destinations from "../components/Destinations";
+import Destinations from "../components/destinations/Destinations";
 import Services from "../components/Services";
 
 function Home() {
