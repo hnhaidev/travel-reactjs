@@ -6,7 +6,6 @@ import LightBox from "./LightBox";
 function Gallery() {
   const {
     galleryStore: { gallery, lightBoxStatus },
-    dispatch,
   } = useContext(GalleryContext);
 
   const [heading] = useState("Travelers captured images");

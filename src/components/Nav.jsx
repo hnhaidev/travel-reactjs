@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import NavContext from "../context/NavContext";
+import { NAV_TOGGLE } from "../context/types/NavTypes";
 
 function Nav() {
-  const { state } = useContext(NavContext);
+  const { state, dispatch } = useContext(NavContext);
 
   return (
     <>
@@ -12,13 +13,19 @@ function Nav() {
       <div className={state ? "nav nav--open" : "nav nav--close"}>
         <div className="nav__content">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={() => dispatch({ type: NAV_TOGGLE })}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about" onClick={() => dispatch({ type: NAV_TOGGLE })}>
+              About
+            </Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact" onClick={() => dispatch({ type: NAV_TOGGLE })}>
+              Contact
+            </Link>
           </li>
         </div>
       </div>

@@ -13,6 +13,10 @@
   transition: all 0.3s linear;
   @include align(flex, center, center, 100%);
 
+  @include responsive(xsmall) {
+    width: 100%;
+  }
+
   &__content {
     width: 100%;
     li {
@@ -26,6 +30,10 @@
         font-weight: 400;
         text-align: right;
         position: relative;
+
+        @include responsive(xsmall) {
+          text-align: center;
+        }
 
         &::before {
           @include position(absolute, 0, 0, 0, 0, 100%, 100%);

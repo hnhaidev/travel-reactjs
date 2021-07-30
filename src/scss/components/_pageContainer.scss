@@ -3,10 +3,22 @@
 .page {
   margin: 8rem 0;
 
+  @include responsive(xsmall) {
+    margin: 4rem 0;
+  }
+
   &__image {
     width: 100%;
     height: auto;
     overflow: hidden;
+
+    @include responsive(small) {
+      width: 80%;
+    }
+
+    @include responsive(xsmall) {
+      width: 100%;
+    }
 
     img {
       width: 100%;
@@ -19,12 +31,26 @@
   &__info {
     margin-left: 4rem;
 
+    @include responsive(small) {
+      margin-left: 0;
+    }
+
     &__heading {
       font-size: 4rem;
       font-weight: 900;
       line-height: 5rem;
       color: $black;
       text-transform: capitalize;
+
+      @include responsive(medium) {
+        font-size: 3rem;
+        font-weight: 700;
+      }
+
+      @include responsive(xsmall) {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
     }
 
     &__msg {

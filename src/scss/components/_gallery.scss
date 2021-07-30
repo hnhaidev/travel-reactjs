@@ -3,6 +3,10 @@
 .gallery {
   margin: 8rem 0;
 
+  @include responsive(xsmall) {
+    margin: 4rem 0;
+  }
+
   &__image {
     width: 100%;
     height: 22rem;
@@ -29,6 +33,11 @@
     @include align(flex, center, center, null);
     flex-direction: column;
 
+    @include responsive(xsmall) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
     h4 {
       color: $white;
       font-size: 1.8rem;
@@ -42,6 +51,12 @@
       background: transparent;
       border-radius: 0.3rem;
       animation: cardAnimation 0.5s linear;
+
+      @include responsive(xsmall) {
+        width: 100%;
+        height: auto;
+      }
+
       @keyframes cardAnimation {
         from {
           opacity: 0;
@@ -57,6 +72,11 @@
         width: 45rem;
         height: 45rem;
         overflow: hidden;
+
+        @include responsive(xsmall) {
+          width: 100%;
+          height: 100%;
+        }
 
         img {
           width: 100%;

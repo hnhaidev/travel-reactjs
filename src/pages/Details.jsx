@@ -17,7 +17,7 @@ function Details() {
     dispatch({ type: DETAILS, payload: id });
     dispatch({ type: CITIES, payload: id });
     window.scroll(0, 0);
-  }, [id]);
+  }, [id, dispatch]);
 
   return (
     <>

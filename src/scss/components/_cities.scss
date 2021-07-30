@@ -6,6 +6,11 @@
   padding: 13rem 0;
   transform: skewY(-5deg);
 
+  @include responsive(xsmall) {
+    margin: 4rem 0;
+    padding: 6rem 0;
+  }
+
   &__container {
     transform: skewY(5deg);
   }
