@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Nav from "./components/Nav";
@@ -26,6 +27,7 @@ function App() {
                   <Switch>
                     <Route path="/" exact component={Home} />
                     <Route path="/about" exact component={About} />
+                    <Route path="/contact" exact component={Contact} />
                     <Route path="/details/:id" exact component={Details} />
                     <Route component={NotFound} />
                   </Switch>

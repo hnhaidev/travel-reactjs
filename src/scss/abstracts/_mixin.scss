@@ -71,3 +71,14 @@
   font-size: 1.3rem;
   text-transform: capitalize;
 }
+
+@mixin control($height, $paddingy, $paddingx, $color) {
+  display: block;
+  width: 100%;
+  border-radius: 0.4rem;
+  outline: none;
+  font-size: 1.6rem;
+  border: 1px solid $color;
+  height: $height;
+  padding: $paddingy $paddingx;
+}
