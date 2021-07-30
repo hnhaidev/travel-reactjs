@@ -61,6 +61,28 @@
   text-transform: capitalize;
 }
 
-mb-55 {
+.mb-55 {
   margin-bottom: 5.5rem !important;
+}
+
+.animation {
+  transform: translateY(-10rem) scale(0);
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+.animate {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.headingAnimation {
+  transform: translateY(-10rem) scale(0) rotate(-2deg);
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+.headingAnimate {
+  transform: translateY(0) scale(1) rotate(-2deg);
+  opacity: 1;
 }

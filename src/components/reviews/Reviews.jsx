@@ -12,7 +12,7 @@ function Reviews() {
   return (
     <div className="reviews">
       <div className="container">
-        <div className="heading">{heading}</div>
+        <div className="heading headingAnimation">{heading}</div>
         <div className="row ml-minus-15 mr-minus-15">
           {reviews.length > 0
             ? reviews.map((review, idx) => (

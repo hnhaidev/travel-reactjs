@@ -15,7 +15,7 @@ function Gallery() {
       {lightBoxStatus ? <LightBox /> : ""}
       <div className="gallery">
         <div className="container">
-          <h2 className="heading mb-55">{heading}</h2>
+          <h2 className="heading mb-55 headingAnimation">{heading}</h2>
           <div className="row">
             {gallery.length
               ? gallery.map((glr, idx) => <GalleryImage key={idx} glr={glr} />)
