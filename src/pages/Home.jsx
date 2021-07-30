@@ -10,6 +10,7 @@ import Destinations from "../components/destinations/Destinations";
 import Services from "../components/services/Services";
 import Reviews from "../components/reviews/Reviews";
 import Gallery from "../components/gallery/Gallery";
+import Footer from "../components/footer/Footer";
 
 function Home() {
   useEffect(() => {
@@ -56,6 +57,8 @@ function Home() {
       <Reviews />
 
       <Gallery />
+
+      <Footer />
     </>
   );
 }

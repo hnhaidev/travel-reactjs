@@ -17,7 +17,11 @@
     height: auto;
     padding: 2rem;
     font-size: 1.4rem;
-
     @include animation(modelAnimate, 0.5s, linear, -10rem, 0);
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }

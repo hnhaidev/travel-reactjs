@@ -47,7 +47,7 @@ function Login({ currentModel }) {
         />
       </div>
 
-      <div className="group">
+      <div className="group model__row">
         <input type="submit" className="btn-dark" value="Login" />
         <span
           onClick={() => dispatch({ type: OPEN_MODEL, payload: currentModel })}

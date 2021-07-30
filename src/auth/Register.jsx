@@ -56,7 +56,7 @@ function Register({ currentModel }) {
         />
       </div>
 
-      <div className="group">
+      <div className="group model__row">
         <input type="submit" className="btn-dark" value="Register" />
         <span
           onClick={() => dispatch({ type: OPEN_MODEL, payload: currentModel })}

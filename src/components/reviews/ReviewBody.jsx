@@ -8,6 +8,7 @@ function ReviewBody({ review }) {
       if (i <= number) {
         resultStar.push(
           <BsFillStarFill
+            key={i}
             size={13}
             color="#df2189"
             className="reviews__body__contents__info__rating__icon"
@@ -18,6 +19,7 @@ function ReviewBody({ review }) {
       else {
         resultStar.push(
           <BsStar
+            key={i}
             size={13}
             color="#df2189"
             className="reviews__body__contents__info__rating__icon"
