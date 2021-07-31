@@ -8,9 +8,7 @@ function ShowFooterLinks({ links, external }) {
         {external ? (
           <>
             <BsChevronRight size={12} />
-            <a href={link.route} target="_blank">
-              {link.name}
-            </a>
+            <a href={link.route}>{link.name}</a>
           </>
         ) : (
           <>
