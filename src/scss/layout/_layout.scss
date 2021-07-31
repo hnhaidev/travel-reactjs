@@ -14,6 +14,12 @@
       }
     }
 
+    @if $i == 8 {
+      @include responsive(small) {
+        width: 100%;
+      }
+    }
+
     @if $i == 3 {
       @include responsive(medium) {
         width: (100% / 12) * 4;
